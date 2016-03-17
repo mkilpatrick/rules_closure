@@ -11,7 +11,7 @@ genrule(
     cmd = " && ".join([
         "IN=$$(pwd)/$(SRCS)",
         "OUT=$$(pwd)/$@",
-        "TMP=$$(mktemp -d)",
+        "TMP=$$(mktemp -d tmp.XXXXXXXXXX)",
         "cd $$TMP",
         "tar -xjf $$IN",
         "cd phantomjs-*",
